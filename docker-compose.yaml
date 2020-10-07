@@ -1,0 +1,11 @@
+version: "3"
+services:
+    jupyterlab_conda_bioinfo:
+        build: ./docker
+        volumes:
+            - ./workspace:/workspace
+        ports: 
+            - 8888:8888
+        init: true
+        stdin_open: true
+        tty: true
